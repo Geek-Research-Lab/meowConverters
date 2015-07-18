@@ -3,6 +3,9 @@ meowConverters= function()
   require("pander")
   require("ggplot2")
   require(knitr)
+
+## Converting any markdown file into HTML as well as .txt formats
+
   options(rstudio.markdownToHTML = 
             function(inputFile, outputFile) {      
               system(paste("mmd", inputFile, " > ", outputFile))
@@ -10,19 +13,5 @@ meowConverters= function()
   )
   require("markdown")
   knit2html("D:\\codes\\webrtc-xx\\README.md")
-  
-  infile <- "D:\\codes\\webrtc-xx\\README.md"
-  outfile <- "D:\\codes\\webrtc-xx\\README.md"
-  
-  success = c()
-  msg = paste0("pandoc -o ", outfile, ".docx", infile, ".md")
-  success = c(success,system(msg, intern = TRUE))
-  if(length(success)==0)
-  {
-    return(TRUE)
-  } 
-  else {
-    return(FALSE)
-  }
 }
 meowConverters()
