@@ -1,8 +1,7 @@
 meowConverters= function()
 {
-  require("pander")
   require("ggplot2")
-  require(knitr)
+  require("knitr")
 
 ## Converting any markdown file into HTML as well as .txt formats
 
